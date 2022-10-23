@@ -1,5 +1,4 @@
 # BookSwap - My fork of "A Xamarin.Forms UI Challenge" by Kim Phillpotts
-
 My main goal is to research "veeery rich" BookSwap app architecture ... and, maybe, to add UWP target. ;)
 
 ## Screenshots
@@ -8,9 +7,6 @@ My main goal is to research "veeery rich" BookSwap app architecture ... and, may
 
 ## About the original app
 This UI Challenge is based on the fantastic dribble designs by [Tubik](https://dribbble.com/Tubik).  
-
-## Dribbble Design
-[![Dribbble Design](https://cdn.dribbble.com/users/418188/screenshots/3563019/bookswap_app_interactions_tubik.gif)](https://dribbble.com/shots/3563019-Book-Swap-App-Interactions)
 
 ## Code sessions (BookSwap dev)
 
@@ -30,11 +26,9 @@ This UI Challenge is based on the fantastic dribble designs by [Tubik](https://d
 - UWP App crashed. I have no idea what's happen... so strange. Can't debug... the app decomposition needed.
 
 ## Contributions
-All the designs I implement are intended to be for learning more about techniques to create beautiful Xamarin.Forms interfaces. 
-
-I welcome pull requests and suggestions to improve the solution. Please just raise an issue or submit a pull request.
-
-Feel free to take this code and do what you will, but please make sure you acknowledge myself and also the original designer.
+- All the designs I implement are intended to be for learning more about techniques to create beautiful Xamarin.Forms interfaces. 
+- I welcome pull requests and suggestions to improve the solution. Please just raise an issue or submit a pull request.
+- Feel free to take this code and do what you will, but please make sure you acknowledge myself and also the original designer.
 
 ## References
 - https://twitch.tv/kymphillpotts    Kym's Twitch Channel
