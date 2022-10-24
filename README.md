@@ -1,5 +1,5 @@
 # BookSwap - My fork of "A Xamarin.Forms UI Challenge" by Kim Phillpotts
-My main goal is to research "veeery rich" BookSwap app architecture ... and, maybe, to add UWP target. ;)
+My main goal is to research "veeery rich" BookSwap app architecture via adding UWP target. 
 
 ## Screenshots
 ![Shot 1](Images/shot1.png)
@@ -20,7 +20,8 @@ This UI Challenge is based on the fantastic dribble designs by [Tubik](https://d
 [![Session 3](https://img.youtube.com/vi/ES96FnGo0Kg/0.jpg)](https://youtu.be/ES96FnGo0Kg)
 
 ## RnD status / My 2 cents
-- UWP target added (19063/16299).
+- Shared project switched from .NETStandard 2.0 to 1.4.
+- iOS target disabled/deleted; UWP target added (19041/15063).
 - UWP App compiled normally.
 - UWP App started. Splashscreen ok.
 - UWP App crashed. I have no idea what's happen... so strange. Can't debug... the app decomposition needed.

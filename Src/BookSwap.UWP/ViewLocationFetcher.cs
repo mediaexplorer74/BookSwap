@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
+//using System.Drawing;
 using System.Linq;
 using System.Text;
 using BookSwap.UWP;
@@ -13,6 +13,7 @@ namespace BookSwap.UWP
 {
     public class ViewLocationFetcher : IViewLocationFetcher
     {
+        /*
         public PointF GetCoordinates(VisualElement view)
         {
             //var renderer = Xamarin.Forms.Platform.UWP.Platform.GetRenderer(view);
@@ -28,7 +29,9 @@ namespace BookSwap.UWP
                 return new PointF();
 
             var nativeView = renderer.GetNativeElement();
-            var location = new int[2];
+
+            // RnD : {1, 1}
+            var location = new int[2] { 1, 1 };
 
             var density = Xamarin.Essentials.DeviceDisplay.MainDisplayInfo.Density;
 
@@ -36,5 +39,6 @@ namespace BookSwap.UWP
             //nativeView.GetLocationOnScreen(location);
             return new PointF(location[0] / (float)density, location[1] / (float)density);
         }
+        */
     }
 }

@@ -14,7 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using FFImageLoading.Forms.Platform;
+//using FFImageLoading.Forms.Platform;
 
 namespace BookSwap.UWP
 {
@@ -60,7 +60,7 @@ namespace BookSwap.UWP
                 Xamarin.Forms.Forms.Init(e);
 
                 //!
-                CachedImageRenderer.Init();
+                //CachedImageRenderer.Init();
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

@@ -5,30 +5,29 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:sharedTransition="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
     mc:Ignorable="d">
     <Application.Resources>
 
         <!--  font families  -->
         <OnPlatform x:Key="ExtraBoldFont" x:TypeArguments="x:String">
             <On Platform="Android" Value="OpenSans-ExtraBold.ttf#Open Sans" />
-            <On Platform="iOS" Value="OpenSans-ExtraBold" />
+            <On Platform="UWP" Value="OpenSans-ExtraBold" />
         </OnPlatform>
         <OnPlatform x:Key="BoldFont" x:TypeArguments="x:String">
             <On Platform="Android" Value="OpenSans-Bold.ttf#Open Sans" />
-            <On Platform="iOS" Value="OpenSans-Bold" />
+            <On Platform="UWP" Value="OpenSans-Bold" />
         </OnPlatform>
         <OnPlatform x:Key="SemiBoldFont" x:TypeArguments="x:String">
             <On Platform="Android" Value="OpenSans-SemiBold.ttf#Open Sans" />
-            <On Platform="iOS" Value="OpenSans-SemiBold" />
+            <On Platform="UWP" Value="OpenSans-SemiBold" />
         </OnPlatform>
         <OnPlatform x:Key="RegularFont" x:TypeArguments="x:String">
             <On Platform="Android" Value="OpenSans-Regular.ttf#Open Sans" />
-            <On Platform="iOS" Value="OpenSans-Regular" />
+            <On Platform="UWP" Value="OpenSans-Regular" />
         </OnPlatform>
         <OnPlatform x:Key="LightFont" x:TypeArguments="x:String">
             <On Platform="Android" Value="OpenSans-Light.ttf#Open Sans" />
-            <On Platform="iOS" Value="OpenSans-Light" />
+            <On Platform="UWP" Value="OpenSans-Light" />
         </OnPlatform>
 
         <!--  styles  -->
@@ -62,9 +61,7 @@
             <Setter Property="FontSize" Value="14" />
         </Style>
 
-
-
-        <Style TargetType="sharedTransition:SharedTransitionNavigationPage">
+        <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor" Value="#FFF571" />
             <Setter Property="BarTextColor" Value="Black" />
         </Style>

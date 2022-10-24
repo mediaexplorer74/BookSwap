@@ -70,7 +70,7 @@ namespace BookSwap.Cells
             canvas.Clear();
 
             // work out where the cell actually is on the page
-            var thisCellPosition = viewLocationFetcher.GetCoordinates(this.View);
+            //var thisCellPosition = viewLocationFetcher.GetCoordinates(this.View);
 
             canvas.DrawRect(info.Rect, _accentPaint);
 
@@ -78,7 +78,7 @@ namespace BookSwap.Cells
             using (SKPath path = new SKPath())
             {
                 path.MoveTo(0, 0);
-                path.LineTo((info.Width) - thisCellPosition.Y, 0);
+                path.LineTo((info.Width), 0);//- thisCellPosition.Y, 0);
                 path.LineTo(0, info.Height *.8f);
                 path.Close();
                 canvas.DrawPath(path, _accentDarkPaint);
@@ -86,7 +86,7 @@ namespace BookSwap.Cells
             using (SKPath path = new SKPath())
             {
                 path.MoveTo(0, 0);
-                path.LineTo(info.Width - (thisCellPosition.Y * 2f), 0);
+                path.LineTo(info.Width - 0, 0); //(thisCellPosition.Y * 2f), 0);
                 path.LineTo(0, info.Height * .6f);
                 path.Close();
                 canvas.DrawPath(path, _accentExtraDarkPaint);

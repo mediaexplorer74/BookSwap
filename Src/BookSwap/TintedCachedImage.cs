@@ -1,7 +1,7 @@
-﻿using FFImageLoading.Forms;
-using FFImageLoading.Svg.Forms;
-using FFImageLoading.Transformations;
-using FFImageLoading.Work;
+﻿//using FFImageLoading.Forms;
+//using FFImageLoading.Svg.Forms;
+//using FFImageLoading.Transformations;
+//using FFImageLoading.Work;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace BookSwap
 {
-public class TintedCachedImage : CachedImage
+public class TintedCachedImage : Image//CachedImage
     {
         public static BindableProperty TintColorProperty = BindableProperty.Create(nameof(TintColor), typeof(Color), typeof(TintedCachedImage), Color.Transparent, propertyChanged: UpdateColor);
 
@@ -24,6 +24,7 @@ public class TintedCachedImage : CachedImage
             var oldcolor = (Color)oldColor;
             var newcolor = (Color)newColor;
 
+            /*
             if (!oldcolor.Equals(newcolor))
             {
                 var view = (TintedCachedImage)bindable;
@@ -34,6 +35,7 @@ public class TintedCachedImage : CachedImage
             };
                 view.Transformations = transformations;
             }
+            */
         }
 
         //To Support SVG
@@ -47,7 +49,7 @@ public class TintedCachedImage : CachedImage
         private static void UpdateSvg(BindableObject bindable, object oldVal, object newVal)
         {
             var _instance = bindable as TintedCachedImage;
-            _instance.Source = SvgImageSource.FromResource((string)newVal);
+            //_instance.Source = SvgImageSource.FromResource((string)newVal);
         }
     }
 }

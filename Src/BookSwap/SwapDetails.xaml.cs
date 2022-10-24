@@ -1,4 +1,4 @@
-﻿using Plugin.SharedTransitions;
+﻿//using Plugin.SharedTransitions;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
@@ -34,10 +34,10 @@ namespace BookSwap
             base.OnAppearing();
 
             // add the elements to the shared transition
-            Transition.SetName(FromTitleLabel, "FromTitle");
-            Transition.SetName(FromAuthorLabel, "FromAuthor");
-            Transition.SetName(SelectedBookTitleLabel, "ToTitle");
-            Transition.SetName(SelectedBookAuthorLabel, "ToAuthor");
+            //Transition.SetName(FromTitleLabel, "FromTitle");
+            //Transition.SetName(FromAuthorLabel, "FromAuthor");
+            //Transition.SetName(SelectedBookTitleLabel, "ToTitle");
+            //Transition.SetName(SelectedBookAuthorLabel, "ToAuthor");
 
             // initial view values
             FromTitleLabel.Opacity = 0;
@@ -46,15 +46,15 @@ namespace BookSwap
             SelectedBookAuthorLabel.Opacity = 0;
 
             DescriptionText.Opacity = 0;
-            DescriptionBackground.ScaleX = 0;
+            //DescriptionBackground.ScaleX = 0;
             SelectedBookDescriptionText.Opacity = 0;
-            SelectedBookDescriptionBackground.ScaleX = 0;
+            //SelectedBookDescriptionBackground.ScaleX = 0;
 
             BookBorderBoxView.Opacity = 0;
             SelectedBookBorderBoxView.Opacity = 0;
 
-            SwapPanel.WidthRequest = 50;
-            SwapPanel.Scale = 0;
+            //SwapPanel.WidthRequest = 50;
+            //SwapPanel.Scale = 0;
             SwapLabel.Opacity = 0;
             CycleArrow.Opacity = 0;
             SelectedBookBookmark.Opacity = 0;
@@ -89,10 +89,10 @@ namespace BookSwap
             parentAnim.Add(0.05, 0.15, new Animation(t => SelectedBookBorderBoxView.Opacity = t, 0, 1));
 
             // Description Background
-            DescriptionBackground.AnchorX = 0;
-            parentAnim.Add(0.15, 0.35, new Animation(t => DescriptionBackground.ScaleX = t, 0, 1, Easing.SinInOut));
-            SelectedBookDescriptionBackground.AnchorX = 1;
-            parentAnim.Add(0.15, 0.35, new Animation(t => SelectedBookDescriptionBackground.ScaleX = t, 0, 1, Easing.SinInOut));
+            //DescriptionBackground.AnchorX = 0;
+            //parentAnim.Add(0.15, 0.35, new Animation(t => DescriptionBackground.ScaleX = t, 0, 1, Easing.SinInOut));
+            //SelectedBookDescriptionBackground.AnchorX = 1;
+            //parentAnim.Add(0.15, 0.35, new Animation(t => SelectedBookDescriptionBackground.ScaleX = t, 0, 1, Easing.SinInOut));
 
             // Description Text
             parentAnim.Add(0.30, .40, new Animation(t => DescriptionText.Opacity = t, 0, 1, Easing.SinInOut));
@@ -105,8 +105,8 @@ namespace BookSwap
             parentAnim.Add(0.30, .40, new Animation(t => SwapFromBookmarkShadow.Opacity = t, 0, .5, Easing.SinInOut));
 
             // animate in the swap panel
-            parentAnim.Add(0.45, 0.60, new Animation(t => { SwapPanel.Scale = t; }, 0, 1, Easing.SinInOut));
-            parentAnim.Add(0.50, 0.70, new Animation(t => { SwapPanel.WidthRequest = t; }, 50, 200, Easing.SinInOut));
+            //parentAnim.Add(0.45, 0.60, new Animation(t => { SwapPanel.Scale = t; }, 0, 1, Easing.SinInOut));
+            //parentAnim.Add(0.50, 0.70, new Animation(t => { SwapPanel.WidthRequest = t; }, 50, 200, Easing.SinInOut));
             parentAnim.Add(0.60, 0.70, new Animation(t => { SwapLabel.Opacity = t; }, 0, 1));
 
             // animate in the arrow

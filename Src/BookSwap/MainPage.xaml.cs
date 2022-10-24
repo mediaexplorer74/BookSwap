@@ -1,6 +1,6 @@
 ﻿using BookSwap.Models;
 using BookSwap.ViewModels;
-using Plugin.SharedTransitions;
+//using Plugin.SharedTransitions;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
@@ -16,7 +16,7 @@ namespace BookSwap
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
+    //[DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
         SKColor _accentColor;
@@ -85,8 +85,10 @@ namespace BookSwap
         {
             // set the selected book
             ((BooksViewModel)BindingContext).SelectedBook = e.Item as Book;
-            SharedTransitionNavigationPage.SetTransitionSelectedGroup(this,
-                ((BooksViewModel)BindingContext).SelectedBook.Title);
+            //SharedTransition
+            NavigationPage.SetBackButtonTitle(this, ((BooksViewModel)BindingContext).SelectedBook.Title);
+            ///SetTransitionSelectedGroup(this,
+            //((BooksViewModel)BindingContext).SelectedBook.Title);
             await Navigation.PushAsync(new SwapDetails());
         }
     }

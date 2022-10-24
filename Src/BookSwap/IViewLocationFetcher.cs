@@ -6,6 +6,6 @@ namespace BookSwap
 {
     public interface IViewLocationFetcher
     {
-        System.Drawing.PointF GetCoordinates(global::Xamarin.Forms.VisualElement view);
+        //System.Drawing.PointF GetCoordinates(global::Xamarin.Forms.VisualElement view);
     }
 }

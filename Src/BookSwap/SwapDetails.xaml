@@ -4,20 +4,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:ffimagesvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:local="clr-namespace:BookSwap"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    xmlns:rainbow="clr-namespace:Xamarin.Forms.DebugRainbows;assembly=Xamarin.Forms.DebugRainbows"
-    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
     xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
     ios:Page.PreferredStatusBarUpdateAnimation="Fade"
     ios:Page.PrefersStatusBarHidden="True"
     mc:Ignorable="d">
 
 
-    <NavigationPage.TitleView>
+    <!--NavigationPage.TitleView>
         <Label
             Margin="-50,0,0,0"
             FontAttributes="Bold"
@@ -26,10 +22,10 @@
             Text="Match"
             TextColor="Black"
             VerticalOptions="Center" />
-    </NavigationPage.TitleView>
+    </NavigationPage.TitleView-->
     <ContentPage.Content>
 
-        <Grid rainbow:DebugRainbow.IsDebug="False">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="80" />
@@ -70,7 +66,6 @@
                     Grid.Row="0"
                     Grid.RowSpan="2"
                     Grid.Column="0"
-                    sharedTransitions:Transition.Name="FromCoverImage"
                     Aspect="AspectFit"
                     HeightRequest="198"
                     HorizontalOptions="Center"
@@ -101,13 +96,13 @@
                     Margin="0,0,0,30"
                     VerticalOptions="End">
 
-                    <pancake:PancakeView
+                    <!--pancake:PancakeView
                         x:Name="DescriptionBackground"
                         Elevation="2"
                         HasShadow="True"
                         Opacity=".5">
                         <BoxView Color="White" />
-                    </pancake:PancakeView>
+                    </pancake:PancakeView-->
 
                     <local:TintedCachedImage
                         x:Name="SwapFromBookmarkShadow"
@@ -137,9 +132,8 @@
                     <Label
                         x:Name="DescriptionText"
                         Margin="10"
-                        FontSize="14"
+                        FontSize="Medium"
                         LineBreakMode="TailTruncation"
-                        MaxLines="4"
                         Style="{StaticResource Author}"
                         Text="{Binding SwapFromBook.Description}"
                         VerticalOptions="Center" />
@@ -148,7 +142,7 @@
             </Grid>
 
             <!--  swap banner  -->
-            <pancake:PancakeView
+            <!--pancake:PancakeView
                 x:Name="SwapPanel"
                 Grid.Row="1"
                 BackgroundColor="White"
@@ -157,7 +151,8 @@
                 HeightRequest="50"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                WidthRequest="200" />
+                WidthRequest="200" /-->
+            
             <Grid
                 Grid.Row="1"
                 HorizontalOptions="Center"
@@ -218,7 +213,6 @@
                     Grid.Row="0"
                     Grid.RowSpan="2"
                     Grid.Column="1"
-                    sharedTransitions:Transition.Name="SelectedBook"
                     Aspect="AspectFit"
                     HeightRequest="198"
                     HorizontalOptions="Center"
@@ -246,13 +240,13 @@
                     Margin="0,0,0,10"
                     VerticalOptions="End">
 
-                    <pancake:PancakeView
+                    <!--pancake:PancakeView
                         x:Name="SelectedBookDescriptionBackground"
                         Elevation="2"
                         HasShadow="True"
                         Opacity=".5">
                         <BoxView Color="White" />
-                    </pancake:PancakeView>
+                    </pancake:PancakeView-->
 
                     <local:TintedCachedImage
                         x:Name="SelectedBookBookmarkShadow"
@@ -281,9 +275,8 @@
                     <Label
                         x:Name="SelectedBookDescriptionText"
                         Margin="10"
-                        FontSize="14"
+                        FontSize="Medium"
                         LineBreakMode="TailTruncation"
-                        MaxLines="4"
                         Style="{StaticResource Author}"
                         Text="{Binding SelectedBook.Description}"
                         VerticalOptions="Center" />
